@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package b_proto;
+option go_package = "./b_protopb";
+
+service BMicroservice {
+  rpc GetB (b_request) returns (b_response) {}
+}
+
+message b_request {
+  int64 param_a = 2;
+}
+
+message b_response {
+  string res_a = 1;
+  int64 res_b = 2;
+}
